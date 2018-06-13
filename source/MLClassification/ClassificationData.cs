@@ -1,7 +1,7 @@
-﻿using Microsoft.ML.Runtime.Api;
-
-namespace SentimentAnalysis
+﻿namespace BinaryClass
 {
+    using Microsoft.ML.Runtime.Api;
+
     /// <summary>
     /// This is the input dataset class and has a float (Sentiment) that has
     /// a value for sentiment of either positive or negative, and a string for
@@ -11,18 +11,18 @@ namespace SentimentAnalysis
     /// This attribute describes the order of each field in the data file,
     /// and which is the Label field.
     /// </summary>
-    public class SentimentData
+    public class ClassificationData
     {
         [Column(ordinal: "0", name: "Label")]
         public float Sentiment;
 
         [Column(ordinal: "1")]
-        public string SentimentText;
+        public string Text;
     }
 
     /// <summary>
     /// This is the class used for prediction after the model has been trained.
-    /// It has a single boolean  <see cref="Sentiment"/> and a PredictedLabel
+    /// It has a single boolean  <see cref="Class"/> and a PredictedLabel
     /// ColumnName attribute.
     /// 
     /// The Label is used to create and train the model, and it's also used with a
@@ -33,6 +33,6 @@ namespace SentimentAnalysis
     public class SentimentPrediction
     {
         [ColumnName("PredictedLabel")]
-        public bool Sentiment;
+        public bool Class;
     }
 }
