@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/ip5lrx0h3yicmbq7?svg=true)](https://ci.appveyor.com/project/Dirkster99/ml)
 # ML
 Sample Project for Binary Classification using ML.Net
 
