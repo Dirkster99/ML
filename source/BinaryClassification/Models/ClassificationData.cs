@@ -1,4 +1,4 @@
-﻿namespace BinaryClass
+﻿namespace Models.BinaryClass
 {
     using Microsoft.ML.Runtime.Api;
 
@@ -30,7 +30,7 @@
     /// prediction and evaluation. For evaluation, an input with training data,
     /// the predicted values, and the model are used.
     /// </summary>
-    public class SentimentPrediction
+    public class ClassPrediction
     {
         [ColumnName("PredictedLabel")]
         public bool Class;

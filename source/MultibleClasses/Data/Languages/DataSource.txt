@@ -1,0 +1,32 @@
+﻿
+- Source of German text corpus:
+  http://wortschatz.uni-leipzig.de/en/download/
+  
+  German, Year 2011, 10K
+
+
+- Source of English text corpus:
+  http://wortschatz.uni-leipzig.de/en/download/
+  
+  English, Year 2005, 10K
+
+
+- Source of French text corpus:
+  http://wortschatz.uni-leipzig.de/en/download/
+  
+  French, Year 2009, 10K
+
+- Source of Italian text corpus:
+  http://wortschatz.uni-leipzig.de/en/download/
+
+  Italien, Year 2017, 10K
+
+- Source of Romanian text corpus:
+  http://wortschatz.uni-leipzig.de/en/download/
+  
+  Romanian, Year 2015, 10K
+
+- Source of Spanish text corpus:
+  http://wortschatz.uni-leipzig.de/en/download/
+  
+  Spanish, Year 2006, 10K

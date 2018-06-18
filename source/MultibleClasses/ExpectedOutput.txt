@@ -1,0 +1,101 @@
+﻿Expected Output
+---------------
+
+Warning: Format error at (927,3)-(927,48): Illegal quoting
+Warning: Format error at (1457,3)-(1457,22): Illegal quoting
+Warning: Format error at (1929,3)-(1929,40): Illegal quoting
+Warning: Format error at (2048,3)-(2048,19): Illegal quoting
+Warning: Format error at (1800,3)-(1800,39): Illegal quoting
+Warning: Format error at (1668,3)-(1668,49): Illegal quoting
+Warning: Format error at (1756,3)-(1756,29): Illegal quoting
+Warning: Format error at (1622,3)-(1622,32): Illegal quoting
+Warning: Format error at (1673,3)-(1673,36): Illegal quoting
+Warning: Format error at (1689,3)-(1689,61): Illegal quoting
+Warning: Suppressing further format error messages
+  Bad value at line 11550 in column Label
+Processed 29994 rows with 1 bad values and 682 format errors
+Warning: Format error at (927,3)-(927,48): Illegal quoting
+Warning: Format error at (1756,3)-(1756,29): Illegal quoting
+Warning: Format error at (1457,3)-(1457,22): Illegal quoting
+Warning: Format error at (1800,3)-(1800,39): Illegal quoting
+Warning: Format error at (1929,3)-(1929,40): Illegal quoting
+Warning: Format error at (1668,3)-(1668,49): Illegal quoting
+Warning: Format error at (1673,3)-(1673,36): Illegal quoting
+Warning: Format error at (1689,3)-(1689,61): Illegal quoting
+Warning: Format error at (1695,3)-(1695,54): Illegal quoting
+Warning: Suppressing further format error messages
+Warning: Format error at (1622,3)-(1622,32): Illegal quoting
+Processed 29994 rows with 0 bad values and 682 format errors
+Warning: Format error at (927,3)-(927,48): Illegal quoting
+Warning: Format error at (1668,3)-(1668,49): Illegal quoting
+Warning: Format error at (1673,3)-(1673,36): Illegal quoting
+Warning: Format error at (1689,3)-(1689,61): Illegal quoting
+Warning: Format error at (1695,3)-(1695,54): Illegal quoting
+Warning: Format error at (1697,3)-(1697,47): Illegal quoting
+Warning: Format error at (1698,3)-(1698,35): Illegal quoting
+Warning: Suppressing further format error messages
+Warning: Format error at (1622,3)-(1622,32): Illegal quoting
+Warning: Format error at (1756,3)-(1756,29): Illegal quoting
+Warning: Format error at (1457,3)-(1457,22): Illegal quoting
+Processed 29994 rows with 0 bad values and 682 format errors
+Warning: Format error at (927,3)-(927,48): Illegal quoting
+Warning: Format error at (1457,3)-(1457,22): Illegal quoting
+Warning: Format error at (1756,3)-(1756,29): Illegal quoting
+Warning: Format error at (1800,3)-(1800,39): Illegal quoting
+Warning: Format error at (1622,3)-(1622,32): Illegal quoting
+Warning: Format error at (1929,3)-(1929,40): Illegal quoting
+Warning: Format error at (1668,3)-(1668,49): Illegal quoting
+Warning: Format error at (1673,3)-(1673,36): Illegal quoting
+Warning: Format error at (1689,3)-(1689,61): Illegal quoting
+Warning: Suppressing further format error messages
+Warning: Format error at (2048,3)-(2048,19): Illegal quoting
+Processed 29994 rows with 0 bad values and 682 format errors
+Not adding a normalizer.
+Using 4 threads to train.
+Automatically choosing a check frequency of 4.
+Warning: Format error at (927,3)-(927,48): Illegal quoting
+Warning: Format error at (1622,3)-(1622,32): Illegal quoting
+Warning: Format error at (1756,3)-(1756,29): Illegal quoting
+Warning: Format error at (1457,3)-(1457,22): Illegal quoting
+Warning: Format error at (1929,3)-(1929,40): Illegal quoting
+Warning: Format error at (2048,3)-(2048,19): Illegal quoting
+Warning: Format error at (1668,3)-(1668,49): Illegal quoting
+Warning: Format error at (1673,3)-(1673,36): Illegal quoting
+Warning: Format error at (1689,3)-(1689,61): Illegal quoting
+Warning: Suppressing further format error messages
+Warning: Format error at (1800,3)-(1800,39): Illegal quoting
+  Bad value at line 11550 in column Label
+Processed 29994 rows with 1 bad values and 682 format errors
+Warning: Skipped 1 instances with missing features/label during training
+Auto-tuning parameters: maxIterations = 48.
+Auto-tuning parameters: L2 = 2.778426E-05.
+Auto-tuning parameters: L1Threshold (L1/L2) = 1.
+Using best model from iteration 8.
+Not training a calibrator because it is not needed.
+Warning: Format error at (389,3)-(389,51): Illegal quoting
+Warning: Format error at (177,3)-(177,26): Illegal quoting
+Warning: Format error at (55,3)-(55,29): Illegal quoting
+Warning: Format error at (582,3)-(582,36): Illegal quoting
+Warning: Format error at (586,3)-(586,34): Illegal quoting
+Warning: Format error at (677,3)-(677,26): Illegal quoting
+Warning: Format error at (551,3)-(551,32): Illegal quoting
+Warning: Format error at (561,3)-(561,37): Illegal quoting
+Warning: Format error at (463,3)-(463,35): Illegal quoting
+Warning: Format error at (470,3)-(470,40): Illegal quoting
+Warning: Suppressing further format error messages
+Processed 29977 rows with 0 bad values and 771 format errors
+
+PredictionModel quality metrics evaluation
+------------------------------------------
+Accuracy Macro: 96.54%
+Accuracy Micro: 96.54%
+ Top KAccuracy: 0.00%
+
+Classification Predictions
+--------------------------
+Prediction: 1-English | Test: 'Hi there, this is Dirk speaking.'
+Prediction: 0-German | Test: 'Hallo, mein Name ist Dirk.'
+Prediction: 5-Spanish | Test: 'Hola, mi nombre es Dirk.'
+Prediction: 3-Italien | Test: 'Ciao, mi chiamo Dirk.'
+Prediction: 4-Romanian | Test: 'Buna ziua, numele meu este Dirk.'
+Prediction: 2-French | Test: 'Bonjour, je m'appelle Dirk.'

@@ -1,0 +1,22 @@
+﻿1> Training and predicting Iris data:
+Automatically adding a MinMax normalization transform, use 'norm=Warn' or 'norm=No' to turn this behavior off.
+Using 4 threads to train.
+Automatically choosing a check frequency of 4.
+Auto-tuning parameters: maxIterations = 9996.
+Auto-tuning parameters: L2 = 2.668802E-05.
+Auto-tuning parameters: L1Threshold (L1/L2) = 0.
+Using best model from iteration 1020.
+Not training a calibrator because it is not needed.
+Predicted flower type is: Iris-virginica
+
+
+2> Training and predicting Digits data:
+Automatically adding a MinMax normalization transform, use 'norm=Warn' or 'norm=No' to turn this behavior off.
+Using 4 threads to train.
+Automatically choosing a check frequency of 4.
+Auto-tuning parameters: maxIterations = 150000.
+Auto-tuning parameters: L2 = 2.666667E-05.
+Auto-tuning parameters: L1Threshold (L1/L2) = 0.
+Using best model from iteration 6380.
+Not training a calibrator because it is not needed.
+Predicted digit is: 8

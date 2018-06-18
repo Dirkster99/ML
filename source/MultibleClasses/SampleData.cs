@@ -1,4 +1,4 @@
-﻿namespace BinaryClass
+﻿namespace MultiClass
 {
     using System.Collections.Generic;
 
@@ -7,15 +7,13 @@
         public InputData(string trainingData,
                          string testData,
                          IEnumerable<ClassificationData> predicts,
-                         string trueClassName,
-                         string falseClassName)
+                         string[] classNames)
         {
             TrainingData = trainingData;
             TestData = testData;
             Predicts = predicts;
 
-            TrueClassName = trueClassName;
-            FalseClassName = falseClassName;
+            ClassNames = classNames;
         }
 
         public string TrainingData { get; }
@@ -24,8 +22,6 @@
 
         public IEnumerable<ClassificationData> Predicts { get; }
 
-        public string TrueClassName { get; }
-
-        public string FalseClassName { get; }
+        public string[] ClassNames { get; }
     }
 }

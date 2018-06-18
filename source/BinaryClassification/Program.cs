@@ -3,6 +3,7 @@ using Microsoft.ML.Data;
 using Microsoft.ML.Models;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms;
+using Models.BinaryClass;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,11 +30,14 @@ namespace BinaryClass
             }
         };
 
+        static string[] sentimentClassNames = { "Positive", "Negative" };
+
         private static readonly InputData sentimentInputData = new InputData
         (
             @".\Data\Sentiment\wikipedia-detox-250-line-data.tsv",
-            @".\Data\Sentiment\wikipedia-detox-250-line-test.tsv", predictSentimentsData,
-            "Positive", "Negative"
+            @".\Data\Sentiment\wikipedia-detox-250-line-test.tsv",
+            predictSentimentsData,
+            sentimentClassNames
         );
         #endregion SentimentInputData
 
@@ -51,11 +55,14 @@ namespace BinaryClass
                 }
         };
 
+        static string[] spamClassNames = { "Spam", "No Spam" };
+
         private static readonly InputData spamInputData = new InputData
         (
             @".\Data\YouGotSpam\training.tsv",
-            @".\Data\YouGotSpam\test.tsv", predictSpamData,
-            "Spam", "No Spam"
+            @".\Data\YouGotSpam\test.tsv",
+            predictSpamData,
+            spamClassNames
         );
         #endregion You have Got Spam InputData
 
@@ -63,8 +70,8 @@ namespace BinaryClass
 
         public static void Main(string[] args)
         {
-            //InputData input = sentimentInputData;
-            InputData input = spamInputData;
+            InputData input = sentimentInputData;
+            //InputData input = spamInputData;
 
             Task.Run(async () =>
             {
@@ -80,7 +87,7 @@ namespace BinaryClass
             }).GetAwaiter().GetResult();
         }
 
-        internal static async Task<PredictionModel<ClassificationData, SentimentPrediction>>
+        internal static async Task<PredictionModel<ClassificationData, ClassPrediction>>
             TrainAsync(InputData input)
         {
             // LearningPipeline allows you to add steps in order to keep everything together 
@@ -103,8 +110,8 @@ namespace BinaryClass
             pipeline.Add(new FastTreeBinaryClassifier() { NumLeaves = 5, NumTrees = 5, MinDocumentsInLeafs = 2 });
 
             // Train the pipeline based on the dataset that has been loaded, transformed.
-            PredictionModel<ClassificationData, SentimentPrediction> model =
-                                pipeline.Train<ClassificationData, SentimentPrediction>();
+            PredictionModel<ClassificationData, ClassPrediction> model =
+                                pipeline.Train<ClassificationData, ClassPrediction>();
 
             // Saves the model we trained to a zip file.
             await model.WriteAsync(_modelpath);
@@ -124,7 +131,7 @@ namespace BinaryClass
         /// </summary>
         /// <param name="model"></param>
         internal static void Evaluate(
-            PredictionModel<ClassificationData, SentimentPrediction> model,
+            PredictionModel<ClassificationData, ClassPrediction> model,
             InputData input)
         {
             // loads the new test dataset with the same schema.
@@ -160,12 +167,12 @@ namespace BinaryClass
         /// </summary>
         /// <param name="model"></param>
         internal static void Predict(
-            PredictionModel<ClassificationData, SentimentPrediction> model,
+            PredictionModel<ClassificationData, ClassPrediction> model,
             InputData input)
         {
             // Use the model to predict the positive 
             // or negative sentiment of the comment data.
-            IEnumerable<SentimentPrediction> predictions = model.Predict(input.Predicts);
+            IEnumerable<ClassPrediction> predictions = model.Predict(input.Predicts);
 
             Console.WriteLine();
             Console.WriteLine("Classification Predictions");
@@ -181,7 +188,7 @@ namespace BinaryClass
                 if (textDisplay.Length > 80)
                     textDisplay = textDisplay.Substring(0, 75) + "...";
 
-                Console.WriteLine($"Prediction: {(item.prediction.Class ? input.TrueClassName : input.FalseClassName)}" + " | " +
+                Console.WriteLine($"Prediction: {(item.prediction.Class ? input.ClassName[0] : input.ClassName[1])}" + " | " +
                                   $"Text: {textDisplay}");
             }
             Console.WriteLine();
