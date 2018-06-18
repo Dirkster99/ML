@@ -13,8 +13,8 @@ The project samples
 2) Spam detection (Spam or No Spam) through classification of text.
 
 ## Classifications with Multible Classes:
-3) Using an input vector of 2 elements (integer and string)[https://github.com/Dirkster99/ML/blob/master/source/MultibleClasses/Program.cs]
+3) Using an input vector of 2 elements [integer and string](https://github.com/Dirkster99/ML/blob/master/source/MultibleClasses/Program.cs)
 
-4) Using an input vector with more than 2 elements (integer and string)[https://github.com/Dirkster99/ML/blob/master/source/IrisDataset/Program.cs]
+4) Using an input vector with more than 2 elements [integer and string and multiple integers](https://github.com/Dirkster99/ML/blob/master/source/IrisDataset/Program.cs)
 
 <a href="https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/glossary">ML.Net Machine Learning Glossary</a>
