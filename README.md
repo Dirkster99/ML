@@ -2,19 +2,20 @@
 # ML
 Sample Project for Binary Classification using ML.Net
 
-This project contains a "Hello World" machine learning .Net sample project from here:
+This project contains "Hello World" machine learning .Net sample projects from these sites:
 - https://docs.microsoft.com/en-us/dotnet/machine-learning/tutorials/sentiment-analysis
 - https://www.codeproject.com/Articles/1230737/Youve-Got-Spam
 
-The project samples
+and other resources. The projects sample several categories of machine learning tasks with sample
+data and working code.
 
-## Binary Classification:
+## Binary Classification
 [Introduction](https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/tasks#binary-classification)
 
 1) Sentiment detection (Psoitive or Negative) through classification of text and
 2) Spam detection (Spam or No Spam) through classification of text.
 
-## Classification with Multible Classes:
+## Classification with Multible Classes
 [Introduction](https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/tasks#multiclass-classification)
 
 3) Using an input vector of 2 elements [integer and string](https://github.com/Dirkster99/ML/blob/master/source/MultibleClasses/Program.cs)
