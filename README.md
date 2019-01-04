@@ -7,7 +7,7 @@ This project contains "Hello World" machine learning .Net sample projects from t
 - https://www.codeproject.com/Articles/1230737/Youve-Got-Spam
 
 and other resources. The projects sample several categories of machine learning tasks with sample
-data and working code.
+data and working code. More on ML.Net can be found on [CodeProject](https://www.codeproject.com/Articles/1249611/Machine-Learning-with-ML-Net-and-Csharp-VB-Net).
 
 ## Binary Classification
 [Introduction](https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/tasks#binary-classification)
